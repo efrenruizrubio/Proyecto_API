@@ -5,7 +5,7 @@
   require "../includes/requester.php";
   $params = Requester::getParams();
   var_dump($params);
-  $query = "SELECT id_usuario, password FROM usuario WHERE username = '$params->usuario'";
+  $query = "SELECT id_usuario, contra FROM usuario WHERE username = '$params->usuario'";
 
   $row = $db->fetchRow($query);
   echo $query;

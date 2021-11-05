@@ -5,7 +5,7 @@ $params = Requester::getParams();
 $opciones = [
   'cost' => 5,
 ];
-$query = "INSERT INTO Usuario (nombre, apellido, password, correo, username) VALUES (
+$query = "INSERT INTO Usuario (nombre, apellido, contra, correo, username) VALUES (
   '$params->nombre', 
   '$params->apellido', 
   '$params->contra', 
