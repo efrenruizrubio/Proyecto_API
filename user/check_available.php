@@ -2,10 +2,10 @@
 require "../includes/connection.php";
 require "../includes/requester.php";
 $values = Requester::getParams();
-$query = "SELECT Id_usuario FROM usuario WHERE Usuario = '$values->user'";
+$query = "SELECT id_usuario FROM Usuario WHERE username = '$values->user'";
 $number = $db->numRows($query);
 
-$query = "SELECT Id_usuario FROM usuario WHERE Correo = '$values->mail'";
+$query = "SELECT id_usuario FROM Usuario WHERE correo = '$values->mail'";
 $numberMail = $db->numRows($query);
 
 if($number||$numberMail){
