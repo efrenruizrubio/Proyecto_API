@@ -18,10 +18,8 @@ $query = "INSERT INTO factura (RFC_Exp, RFC_Rec, regimen, impuestos, cond_pago, 
   '$params->cantidad',
   '$params->valor',
   '$id')";
-
-echo $query;
+  
 $result = $db->insert($query);
-//Requester::endRequest('correct');
 Requester::endRequest('correct', array(
   'result' => $result
 ));
